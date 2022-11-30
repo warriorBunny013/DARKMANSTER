@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkmanster</title>
+</head>
+<style>
+    body{
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .dark{
+        color:rgb(81, 78, 78);
+    }
+    .blue{
+        color:rgb(174, 233, 233);
+    }
+    p,.button{
+        font-family: 'open sans',sans-serif;
+        font-size: 1rem;
+    }
+    .button{
+        background-color: rgb(91, 214, 214);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height:2rem;
+        width:4.5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        /* animation:backgroundYellow 1s infinite; */
+    }
+    .row{
+        padding:0 0.25rem;
+        pointer-events: none;
+    }
+    .circle{
+        position:absolute;
+        top:0;
+        left:0;
+        height: 2rem;
+        width:2rem;
+        border-radius: 50%;
+        background-color: blue;
+        /* animation:moveCircleRight 1s infinite; */
+        transition: all 0.4s;
+        pointer-events: none;
+    }
+    /* animations */
+    @keyframes moveCircleRight{
+        from{
+            left:0;
+            background-color: blue;
+        }
+        to{
+            left:100%;
+            transform:translateX(-100%);
+            background-color: yellow;
+        }
+    }
+    @keyframes moveCircleLeft{
+        from{
+            left:100%;
+            transform:translateX(-100%);
+            background-color: yellow;
+        }
+        to{
+            left:0;
+            background-color: blue;
+        }
+    }
+    
+      
+    @keyframes backgroundYellow{
+        from{
+           
+            background-color: rgb(95, 117, 241);
+        }
+        to{
+            
+            background-color: rgb(225, 238, 109);
+        }
+    }
+    @keyframes backgroundBlue{
+        from{
+           
+            background-color: rgb(225, 238, 109);
+        }
+        to{
+            
+            background-color: rgb(95, 117, 241);
+        }
+    }
+
+
+</style>
+<body>
+    <h1><span class="dark">Dark</span>Manster</h1>
+    <p>Change theme of your website to your comfort by only a single click.</p>
+    <div class="button">
+        <div class="row">On</div>
+        <div class="row">Off</div>
+        <div class="circle"></div>
+    </div>
+</body>
+<script src="./popup.js"></script>
+</html>

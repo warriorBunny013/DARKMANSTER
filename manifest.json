@@ -1,0 +1,18 @@
+{
+   "manifest_version":3,
+    "name":"darkmanster",
+     "description":"change light mode to dark mode",
+     "version":"1.0.0",
+     "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+     "action": {
+      
+      "default_popup": "popup.html",
+      "deafult_title": "darkmanster"
+    },
+     "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["popup.js"]
+      }
+    ]
+}
