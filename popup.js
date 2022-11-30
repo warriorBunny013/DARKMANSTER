@@ -12,7 +12,7 @@ const circle =document.querySelector(".circle");
         
         chrome.scripting.executeScript({
             target: {tabId: my_tabid},
-            file:"appOn.js"
+            files:"appOn.js"
         });
 
     }
@@ -23,7 +23,7 @@ const circle =document.querySelector(".circle");
         
         chrome.scripting.executeScript({
             target: {tabId: my_tabid},
-            file:"appOff.js"
+            files:"appOff.js"
         })
     }
  })
